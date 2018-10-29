@@ -39,7 +39,9 @@ class _HomeScreenState extends State<HomeScreen> {
     
     bool isSelected = _isSelected(item, viewmodel.cartList);
 
-    return ListTile(
+    return Card(
+      margin: EdgeInsets.all(7.0),
+      child: ListTile(
       leading: Text('${item['name']}', style: Theme.of(context).textTheme.title),
       title: Text('${item['price']}'),
       trailing: Container(
@@ -49,15 +51,18 @@ class _HomeScreenState extends State<HomeScreen> {
           onPressed: isSelected ? null : () => viewmodel.onPressedCallback(item: item),
         ),
       )
+    )
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: HomeAppBar(context: context),
-
-      body: new Container(
+    return Scaffold(
+      appBar: HomeAppBar(
+        context: context, 
+        title: Text('Products'),
+      ),
+      body: Container(
         child: StoreConnector<AppState, _ViewModel>(
           converter: _ViewModel.fromStore,
           builder: (_, _ViewModel _viewmodel) {

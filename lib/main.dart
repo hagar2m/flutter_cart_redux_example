@@ -24,6 +24,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Cart Redux Example',
+        theme: ThemeData(
+          primaryColor: Colors.yellow,
+          brightness: Brightness.dark,
+        ),
         routes: <String, WidgetBuilder> {
           '/': (_) => HomeScreen(),
           '/cartScreen': (_) => CartScreen(),
