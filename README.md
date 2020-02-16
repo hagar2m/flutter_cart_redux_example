@@ -14,6 +14,6 @@ is an simple example of cart with redux in flutter
 <img src="https://user-images.githubusercontent.com/44163927/47658896-8060aa80-db9c-11e8-83f1-21c5e11671e4.jpeg" width="300" />
 
 # cart screen
-- you view your cart list
+- View your cart list
 - you can delete item from cart list
 <img src="https://user-images.githubusercontent.com/44163927/47658897-8060aa80-db9c-11e8-9932-c5445989bb9a.jpeg" width="300" />
